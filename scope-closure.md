@@ -70,3 +70,31 @@ box1();
 ```
 
 Biến function sẽ xoá khỏi bộ nhớ khi thoát khỏi function.
+
+## Closures
+
+Là một hàm có thể truy cập được biến ở bên ngoài phạm vi của nó
+
+```js
+function celebrityID() {
+  var celebrityID = 999;
+  // Ta đang trả về một object với các hàm bên trong.
+  // Tất cả các hàm bên trong có thể truy cập đến biến của hàm ngoài (celebrityID).
+  return {
+    getID: function () {
+      // Hàm này sẽ trả về celebrityID đã được cập nhật.
+      // Nó sẽ trả về giá trị hiện tại của celebrityID, sau khi setID thay đổi nó.
+      return celebrityID;
+    },
+    setID: function (theNewID) {
+      // Hàm này sẽ thay đổi biến của hàm ngoài khi gọi.
+      celebrityID = theNewID;
+    },
+  };
+}
+
+var mjID = celebrityID(); //Lúc này, celebrityID đã trả về
+mjID.getID(); // 999
+mjID.setID(567); // Thay đổi biến của hàm ngoài
+mjID.getID(); // 567: Tả về biến celebrityID đã được cập nhật.
+```
