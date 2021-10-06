@@ -13,7 +13,7 @@ function log() {
 log();
 ```
 
-Biến global sẽ xoá khi F5, closed tab or trình duyệt.
+Biến global sẽ xoá khỏi bộ nhớ khi F5, closed tab or trình duyệt.
 
 ### Block(Khối: let, const)
 
@@ -26,7 +26,7 @@ Là những biến, hàm nằm trong `{}`.
 console.log(log); //Uncaught ReferenceError: log is not defined
 ```
 
-Biến block sẽ xoá khi thoát khỏi block.
+Biến block sẽ xoá khỏi bộ nhớ khi thoát khỏi block.
 
 ### Local(Var, function)
 
@@ -51,7 +51,7 @@ function fullName(first, last) {
 fullName('Hoa', 'Nguyen'); //Hoa Nguyen
 fullName('Huynh', 'Phan'); //Huynh Phan
 fullName('Hoang', 'Tran'); // Hoang Tran
-//vì mỗi lần gọi hàm fullName có đối số khác nhau, nên mỗi lần hàm fullName được nhận tham số khác nhau nên tạo ra các phạm vi mới.
+//vì mỗi lần gọi hàm fullName có đối số khác nhau, nên mỗi lần hàm fullName được gọi sẽ nhận tham số khác nhau nên tạo ra các phạm vi mới.
 ```
 
 Các hàm có thể truy cập được các biến được khai báo trong phạm vi của nó và bên ngoài nó.
@@ -69,4 +69,4 @@ box1();
 //note: luôn truy cập biến có phạm vi gần nhất.
 ```
 
-Biến function sẽ xoá khi thoát khỏi function.
+Biến function sẽ xoá khỏi bộ nhớ khi thoát khỏi function.
