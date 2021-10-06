@@ -8,9 +8,9 @@
 let a = 9; // biến a có phạm vi global.
 ```
 
-    - Block scope
+  - Block scope
 
-- Local Scope
+  - Local Scope
 
 - Closures
   - This
